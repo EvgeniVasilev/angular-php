@@ -72,7 +72,7 @@
         <!--main controller-->
         <script src="controllers/appController.js" type="text/javascript"></script>
         <!--application routes-->
-        <script src="routes/rotes.js" type="text/javascript"></script>
+        <script src="routes/routes.js" type="text/javascript"></script>
     </head>
     <body data-ng-controller="appController">
         <div class="container-fluid">
