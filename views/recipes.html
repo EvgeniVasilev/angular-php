@@ -1,0 +1,21 @@
+<header>
+    <h1>
+        <small>List of Recipes</small>
+    </h1>
+</header>
+<article class="row">    
+    <div data-ng-repeat="item in list.data">
+        <div class="col-lg-4 col-md-4 col-sm-6  col-xs-12 center-block-custom">
+            <h2 class="alert-success center">
+                <small data-ng-bind="item.name"></small>
+            </h2>
+            <div class="col-lg-12">
+                <img data-ng-src="{{item.image}}" class="img-thumbnail" alt="Recipe Image"/>
+            </div>
+            <span class="description" data-ng-bind="item.description"></span>
+            <br/>
+            <a class="btn btn-primary" href="#recipe/{{$index}}">View Recipe</a>
+            <a class="btn btn-primary" href="#edit/recipe/{{$index}}">Edit Recipe</a>
+        </div>
+    </div>    
+</article>

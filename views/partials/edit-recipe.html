@@ -1,0 +1,56 @@
+<div class="row">
+    <div class="">
+        <div class="col-lg-12">
+            <a class="btn btn-primary" href="#/">List of Recipes</a>
+        </div>
+    </div>
+    <form class="col-lg-4" name="editRecipe" data-ng-submit="isValidEditForm()" novalidate="">
+        <input type="hidden" data-ng-model="recipe.id"/>
+        <h1>
+            <small>
+                Edit Recipe
+            </small>
+        </h1>
+        <div class="form-group">
+            <p>
+                <label class="label label-default">Recipe Name:</label>
+            </p>
+            <input type="text" id="recipeName" name="recipeName" data-ng-model="recipe.name" class="form-control" required/>
+              <!--error message recipe name field-->
+            <div data-ng-show="editRecipe.$valid || editRecipe.recipeName.$touched" class="custom-error-class">
+                <div data-ng-show="editRecipe.recipeName.$error.required" class="custom-error-class">
+                    Pleas, fill the field!
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <p>
+                <label class="label label-default">Recipe Description:</label>              
+            </p>
+            <textarea  class="form-control" rows="5"  id="recipeDescription" name="recipeDescription" data-ng-model="recipe.description" required="">             
+            </textarea>
+            <!--error message recipe description field-->
+            <div data-ng-show="editRecipe.$valid || editRecipe.recipeDescription.$touched" class="custom-error-class">
+                <div data-ng-show="editRecipe.recipeDescription.$error.required" class="custom-error-class">
+                    Pleas, fill the field!
+                </div>
+            </div>            
+        </div>
+        <div class="form-group">
+            <p>
+                <label class="label label-default">Recipe Body:</label>
+            </p>
+            <textarea class="form-control" rows="8" id="recipeBody" name="recipeBody" data-ng-model="recipe.body" required=""></textarea>
+            <!--error message recipe description field-->
+            <div data-ng-show="editRecipe.$valid || editRecipe.recipeBody.$touched" class="custom-error-class">
+                <div data-ng-show="editRecipe.recipeBody.$error.required" class="custom-error-class">
+                    Pleas, fill the field!
+                </div>
+            </div> 
+        </div>
+        
+        <div class="form-group">
+            <input type="submit" class="btn btn-primary form-control" value="Edit Recipe"/>
+        </div>
+    </form>
+</div>

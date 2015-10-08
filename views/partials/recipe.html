@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-lg-12">
+        <a class="btn btn-primary" href="#/">List of Recipes</a>
+    </div>
+</div>   
+
+<div class="row">
+    <div class="col-lg-4">
+        <h2 class="alert-success center">
+            <small data-ng-bind="recipe.name"></small>
+        </h2>
+    </div>
+    <div class="row" style="margin: 0;"></div>
+    <div class="clear-fix">
+        <div class="col-lg-4">
+            <div class="col-lg-12">
+                <img data-ng-src="{{recipe.image}}" class="img-thumbnail"  alt="Recipe Image"/>
+            </div>
+        </div>
+        <div>
+            <p class="description">
+            {{recipe.body}}                
+            </p>
+        </div>
+    </div>
+</div>
+
